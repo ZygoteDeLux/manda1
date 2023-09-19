@@ -1,0 +1,26 @@
+{
+  "name": "manda1",
+  "version": "0.0.1",
+  "description": "this is my mandatory assignment in node",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZygoteDeLux/manda1.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Oscar Storm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZygoteDeLux/manda1/issues"
+  },
+  "homepage": "https://github.com/ZygoteDeLux/manda1#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
