@@ -9,6 +9,13 @@ app.get("/", (req, res) =>{
     res.sendFile(path.resolve("public/home.html"));
 })
 
+app.get("/week1", (req, res) =>{
+    res.sendFile(path.resolve("public/week1.html"));
+})
+
+app.get("/week2", (req, res) =>{
+    res.sendFile(path.resolve("public/week2.html"));
+})
 
 
 
