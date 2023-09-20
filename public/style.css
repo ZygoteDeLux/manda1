@@ -1,0 +1,17 @@
+nav ul {
+
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 40px;
+    color : green
+}
+
+
+.content {
+    margin-top: 100px;
+    font-family: fantasy, copperlate, papyrus;
+}
