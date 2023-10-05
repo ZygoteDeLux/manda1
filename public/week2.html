@@ -9,30 +9,115 @@
   </head>
   <body>
     <div class="headline">
-      <h1>This is an overview of week 2</h1>
+      <h1>Week 2</h1>
     </div>
     <div class="content">
       <div class = "subHeadline">
-        Understand scoping in Javascript and know to always use const if you can
-        get away with it otherwise let.<br />
+        Understand scoping in Javascript<br>
+        and know to always use const if you can get away with it otherwise let.<br />
       </div>
+      <br>
+      Scope refers to the context in which variables are declared, accessed, and manipulated. There are three types of scope:<br>
+      <div class="subHeadline1">Global Scope:</div> Variables declared outside any function or block are globally scoped.<br>
+      <div class="subHeadline1">Function Scope:</div> Variables declared within a function are function scoped.<br>
+      <div class="subHeadline1">Block Scope:</div> Variables declared within a block <div class="code"><code>{}</code></div> are block scoped.<br>
+      <br>
+      <div class="subHeadline1">
+        Var, Let, and Const:
+      </div>
+      <br>
+      var: Function-scoped, can be redeclared and reassigned.<br>
+      let: Block-scoped, can be reassigned but not redeclared.<br>
+      const: Block-scoped, cannot be reassigned or redeclared.<br>
+      <br>
+      <div class="subHeadline1">
+        Why Prefer const over let?
+      </div>
+      <br>
+      Immutability: Using const signifies that a variable's value will not be reassigned, making code easier to reason about.<br>
+      Error Prevention: Accidental reassignment is less likely.<br>
+      Readability: Indicates intention that a variable should remain constant.<br>
+      <br>
+      <div class="subHeadline1">
+        When to Use let?<br>
+      </div>
+      <br>
+      Use let when you know that the value of the variable will change over time.<br>
       <br>
 
       <div class="subHeadline">
-        Understand advanced things about functions in Javascript.
-      </div>
-      <br>
-      
-      <div class="subHeadline">
+        Understand advanced things about functions in Javascript.<br>
         Can write callback functions with different syntax.
       </div>
       <br>
-
+      First-Class Functions: In JavaScript, functions are first-class objects, meaning they can be assigned to variables, passed as arguments, and returned from other functions.<br>
+      Higher-Order Functions: Functions that take another function as an argument or return a function as a result.<br>
+      Closures: Functions have access to variables from outer scopes even after the outer function has returned.<br>
+      Arrow Functions: A shorthand syntax for writing function expressions.<br>
+      Async/Await: Modern way to handle asynchronous operations, built on top of Promises.<br>
+      <br>
+      <div class="subHeadline1">
+        Basic callback function
+      </div>
+      <div class="code">
+        <code>
+          function calculate(num1, num2, callback){<br>
+            <p>&emsp;return callback(num1, num2);<br>
+              <br>
+          }<br>
+        <br>
+        
+          function sum(a, b){<br>
+            <p>&emsp;return (a + b)<br>
+              <br>
+          } <br>
+        
+          calculate(24821,27431, sum);<br>
+        </code>
+      </div>
+      the calculate function will in this instance return 52252.<br>
+      <br>
+      <div class="subHeadline1">
+        callback function using arrowfunction syntax<br>
+      </div>
+      <br>
+      <div class="code">
+        <code>
+          const calculate = (num1, num2, callback) =>{<br>
+            <p>&emsp;return callback(num1, num2);<br>
+              <br>
+          }<br>
+          <br>
+        
+          const sum = (a, b) => {<br>
+            <p>&emsp;return a + b;<br>
+              <br>
+          }<br>
+        <br>
+          calculate(1, 2, sum)<br>
+        </code>
+      </div>
+      The calculate function will in this instance return 3.<br>
+      <br>
       <div class="subHeadline">
         Understands Package.json and can set it up by hand.
       </div>
       <br>
-
+      make a package.json file with the following code.
+      <div class="code">
+        <code>
+          {<br><br>
+            "dependencies": {<br>
+            <p>&emsp;"express": "4.18.2"<br>
+              <p>&emsp;}<br><br>
+          }
+        </code>
+      </div>
+      It's now possible to use the command i terminal<br>
+      <div class="code">
+        <code>npm install</code>
+      </div> which will read the package.json file, download your dependencies and set up a package-lock.json file.<br>
+      <br>
       <div class="subHeadline">
         Can create a server instance with Express from memory.
       </div>
@@ -48,12 +133,6 @@
         Understands node_modules.
       </div>
       <br>
-
-      
-
-      
-      
-      
      
     </div>
     <nav>
