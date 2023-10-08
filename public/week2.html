@@ -113,7 +113,7 @@
           }
         </code>
       </div>
-      It's now possible to use the command i terminal<br>
+      It's now possible to use the command in terminal<br>
       <div class="code">
         <code>npm install</code>
       </div> which will read the package.json file, download your dependencies and set up a package-lock.json file.<br>
@@ -122,22 +122,78 @@
         Can create a server instance with Express from memory.
       </div>
       <br>
-
+      <div class="subHeadline1">
+        after adding this in your package.json file    
+      </div>
+      <div class="code">
+        <code>
+          "type" : "module"
+        </code>
+      </div>
+      <div class="subHeadline1">
+        It's now possible to use the syntax "import";
+      </div>
+      <div class="code">
+        <code>
+            import express from "express";<br>
+            const app = express();<br>
+        </code>
+      </div>
+      <br>
       <div class="subHeadline">
         Understands how to send data with GET requests over HTTP and knows how
         to do it in Express.
       </div>
       <br>
-
+      in HTTP, you can send data with GET requests by appending query parameters to the URL.<br>
+      Query parameters are key-value pairs that come after the question mark "?" in the URL. Multiple query parameters are separated by the ampersand "&" character.<br>
+      <div class="code">
+        <code>
+          http://example.com/users?name=John&age=30
+        </code>
+      </div>
+      In this URL, name and age are query parameters with the values John and 30 respectively.<br>
+      <br>
+      In an Express app, you can access these query parameters using the req.query object in your route handler function. Here's an example:<br>
+      <br>
+      <div class="subHeadline1">
+        In an Express app, you can access these query parameters using the req.query object in your route handler function. Here's an example:<br>
+      </div>
+      <div class="code">
+        <code>
+          import express from 'express';<br>
+          <br>
+          const app = express();<br>
+          <br>
+          // Define a route to handle GET requests <br>
+          app.get('/users', (req, res) => {<br>
+          // Extract query parameters from the request<br>
+          const { name, age } = req.query;<br>
+            <br>
+          // Do something with the data<br>
+          res.send(`Received name: ${name}, age: ${age}`);<br>
+          });<br>
+    
+          // Start the server on port 3000<br>
+          app.listen(3000, () => {<br>
+          console.log('Server is running on http://localhost:3000');<br>
+          });<br>
+        </code>
+      </div>
+      <br>
       <div class="subHeadline">
         Understands node_modules.
       </div>
       <br>
+      The node_modules directory is a folder in a Node.js project where third-party packages and libraries are stored after you install them<br>
+      using the npm (Node Package Manager) or other package managers like Yarn. This folder is automatically created when you install a package using npm install <package-name>.
+
+
      
     </div>
     <nav>
       <ul>
-        <li><a href="/">home</a></li>
+        <li><a href="/home">home</a></li>
         <li><a href="/week1">Week 1</a></li>
         <li><a href="/week3">Week 3</a></li>
         <li><a href="/week4">Week 4</a></li>
