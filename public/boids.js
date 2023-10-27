@@ -2,11 +2,11 @@ class Boid{
     constructor(){
         this.position = createVector(random(width), random(height));
         this.velocity = p5.Vector.random2D();
-        this.velocity.setMag(random(2, 4))
+        this.velocity.setMag(random(1, 2))
         this.acceleration = createVector();
         //limit to the steer force;
-        this.maxForce = 2;
-        this.maxSpeed = 6;
+        this.maxForce = 0.2;
+        this.maxSpeed = 3;
     }
 
     edges(){
@@ -24,7 +24,7 @@ class Boid{
 
     align(boids){
         //the perception of the boid.
-        let visionRadius = 50;
+        let visionRadius = 90;
         //force vector to enforce steering on the boid.
         let steering = createVector();
         //keeps track of total boids within vision radius.
@@ -65,7 +65,7 @@ class Boid{
 
     seperation(boids){
         //the perception of the boid.
-        let visionRadius = 50  ;
+        let visionRadius = 35;
         //force vector to enforce steering on the boid.
         let steering = createVector();
         //keeps track of total boids within vision radius.
@@ -112,7 +112,7 @@ class Boid{
 
     cohesion(boids){
         //the perception of the boid.
-        let visionRadius = 50;
+        let visionRadius = 120;
         //force vector to enforce steering on the boid.
         let steering = createVector();
         //keeps track of total boids within vision radius.
