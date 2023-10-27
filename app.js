@@ -50,3 +50,5 @@ app.post("/login", (req, res) => {
 
 const PORT = 8080;
 app.listen(PORT);
+
+module.exports = app;
