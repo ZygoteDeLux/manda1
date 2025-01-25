@@ -2,7 +2,6 @@ import express from "express";
 import path from "path";
 const app = express();
 const PORT = 8080;
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -53,4 +52,4 @@ app.post("/login", (req, res) => {
 
 app.listen(PORT);
 
-module.exports = app;
+export default app;
