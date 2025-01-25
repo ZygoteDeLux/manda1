@@ -3,7 +3,7 @@ import path from "path";
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("/public"));
+app.use(express.static("public"));
 // Set EJS as the view engine
 app.set("view engine", "ejs");
 // Set the views directory
