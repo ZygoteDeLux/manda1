@@ -1,10 +1,9 @@
 import express from "express";
 import path from "path";
 const app = express();
-const PORT = 8080;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("/public"));
 // Set EJS as the view engine
 app.set("view engine", "ejs");
 // Set the views directory
@@ -49,7 +48,7 @@ app.post("/login", (req, res) => {
   return res.status(401).send("Invalid login credentials");
 });
 
-
+const PORT = 8080;
 app.listen(PORT);
 
 export default app;
